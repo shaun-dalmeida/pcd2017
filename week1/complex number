@@ -1,0 +1,38 @@
+#include<stdio.h>
+	struct complex
+	{
+	float real;
+	float imaginary;
+	};
+	struct complex getcomplex()
+	{
+	struct complex r;
+	printf(" Enter the real part:\n");
+	scanf("%f",&r.real);
+	printf(" Enter the imaginary part:\n");
+	scanf("%f",&r.imaginary);
+	return r;
+	}
+	struct complex add(struct complex a,struct complex b)
+	{
+	struct complex c;
+	c.real=a.real+b.real;
+	c.imaginary=a.imaginary+b.imaginary;
+	return c;
+	}
+	struct complex show(struct complex c)
+	{
+	printf("The real part is:%f",c.real);
+	printf("The imaginary part is:%f",c.imaginary);
+	}
+	int main()
+	{
+	struct complex a;
+	struct complex b;
+	struct complex c;
+	a=getcomplex();
+	b=getcomplex();
+	c=add(a,b);
+	show(c);
+	return(0);
+}
